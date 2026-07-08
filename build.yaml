@@ -1,0 +1,16 @@
+---
+include:
+  # 左手(セントラル): ZMK Studio有効(USB/BLE両対応)
+  - board: seeeduino_xiao_ble
+    shield: jisaku_1_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: jisaku_1_left
+  # 右手(ペリフェラル)
+  - board: seeeduino_xiao_ble
+    shield: jisaku_1_right
+    artifact-name: jisaku_1_right
+  # ペアリングトラブル時のリセット用
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
+    artifact-name: settings_reset

@@ -1,0 +1,11 @@
+file_format: "1"
+id: jisaku_1
+name: jisaku_1
+type: shield
+url: https://github.com/
+requires: [seeed_xiao]
+features:
+  - keys
+siblings:
+  - jisaku_1_left
+  - jisaku_1_right
