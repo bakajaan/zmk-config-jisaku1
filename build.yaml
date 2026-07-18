@@ -1,14 +1,14 @@
 ---
 include:
-  # 左手(セントラル): ZMK Studio有効(USB/BLE両対応)
+  # 左手(セントラル): DYA Studio有効 + RGB LEDウィジェット
   - board: seeeduino_xiao_ble
-    shield: jisaku_1_left
+    shield: jisaku_1_left rgbled_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: jisaku_1_left
-  # 右手(ペリフェラル)
+  # 右手(ペリフェラル) + RGB LEDウィジェット
   - board: seeeduino_xiao_ble
-    shield: jisaku_1_right
+    shield: jisaku_1_right rgbled_adapter
     artifact-name: jisaku_1_right
   # ペアリングトラブル時のリセット用
   - board: seeeduino_xiao_ble
