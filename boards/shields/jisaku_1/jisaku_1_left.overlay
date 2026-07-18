@@ -1,1 +1,2 @@
 #include "jisaku_1.dtsi"
+#include <behaviors/battery_history_request.dtsi>
