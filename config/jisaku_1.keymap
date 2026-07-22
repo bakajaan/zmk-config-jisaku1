@@ -25,6 +25,24 @@
 #define JP_LBRACE     RIGHT_BRACE       // {
 #define JP_RBRACE     PIPE              // }
 
+// ===== ホールドタップ誤爆対策 =====
+// balanced: 別キーが押して離されるまで完了したら長押し判定
+// require-prior-idle-ms: 直前の打鍵から125ms以内は問答無用で単押し判定(ローリング誤爆根絶)
+// quick-tap-ms: タップ直後150ms以内の再押下は単押し(キーリピート有効化)
+&mt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;
+    require-prior-idle-ms = <125>;
+};
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <150>;
+    require-prior-idle-ms = <125>;
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
