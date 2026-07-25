@@ -27,9 +27,11 @@ manifest:
     - name: zmk-feature-watchdog
       remote: cormoran
       revision: main
+      import: true
     - name: zmk-feature-kscan-diagnostics
       remote: cormoran
       revision: main
+      import: true
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3-branch
