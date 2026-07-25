@@ -1,4 +1,6 @@
 manifest:
+  defaults:
+    revision: main
   remotes:
     - name: cormoran
       url-base: https://github.com/cormoran
@@ -7,25 +9,32 @@ manifest:
     - name: bakajaan
       url-base: https://github.com/bakajaan
   projects:
+    # ZMK: cormoran fork, main+dya = ZMK main (Zephyr 4.1) + DYA Studio RPC
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+dya
+      revision: main+dya
       import: app/west.yml
-    - name: zmk-module-ble-management
-      remote: cormoran
-      revision: zmk-v0.3.0.0
-    - name: zmk-module-battery-history
-      remote: cormoran
-      revision: main
-    - name: zmk-module-settings-rpc
-      remote: cormoran
-      revision: zmk-v0.3.0.0
+    # RGB LED widget (main supports Zephyr 4.1 / xiao_ble naming)
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: v0.3-branch
+    # DYA Studio modules (main = Zephyr4対応)
+    - name: zmk-module-ble-management
+      remote: cormoran
+    - name: zmk-module-battery-history
+      remote: cormoran
+    - name: zmk-module-settings-rpc
+      remote: cormoran
+    # DYA Studio トラブルシューティング機能
+    - name: zmk-feature-device-info
+      remote: cormoran
+    - name: zmk-feature-watchdog
+      remote: cormoran
+      import: true
+    - name: zmk-feature-kscan-diagnostics
+      remote: cormoran
+      import: true
     # 共通キーマップ定義(jisaku_1 / aerogu34で共有)
     - name: zmk-keymap-common
       remote: bakajaan
-      revision: main
   self:
     path: config
