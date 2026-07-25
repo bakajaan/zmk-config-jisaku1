@@ -1,16 +1,17 @@
 ---
 include:
-  # 左手(セントラル): DYA Studio有効 + RGB LEDウィジェット
-  - board: seeeduino_xiao_ble
+  # Central (left) — Studio RPC over USB
+  - board: xiao_ble/nrf52840/zmk
     shield: jisaku_1_left rgbled_adapter
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: jisaku_1_left
-  # 右手(ペリフェラル) + RGB LEDウィジェット
-  - board: seeeduino_xiao_ble
+
+  # Peripheral (right)
+  - board: xiao_ble/nrf52840/zmk
     shield: jisaku_1_right rgbled_adapter
     artifact-name: jisaku_1_right
-  # ペアリングトラブル時のリセット用
-  - board: seeeduino_xiao_ble
+
+  # BLE pairing reset
+  - board: xiao_ble/nrf52840/zmk
     shield: settings_reset
     artifact-name: settings_reset
