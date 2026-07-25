@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/cormoran
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: bakajaan
+      url-base: https://github.com/bakajaan
   projects:
     - name: zmk
       remote: cormoran
@@ -21,5 +23,9 @@ manifest:
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3-branch
+    # 共通キーマップ定義(jisaku_1 / aerogu34で共有)
+    - name: zmk-keymap-common
+      remote: bakajaan
+      revision: main
   self:
     path: config
