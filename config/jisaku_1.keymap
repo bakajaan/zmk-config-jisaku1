@@ -10,6 +10,10 @@
  * 最下段外側3キー×2はaerogu34との統一のため全レイヤーで&none。
  */
 
+/* ランタイムマクロ挙動 (&rmacro) の定義。DYA StudioのMacro & Comboタブから
+ * キーへ割り当てる際に使用 (zmk-feature-runtime-macro 2026-07-26追加) */
+#include <behaviors/runtime_macro.dtsi>
+
 #include <fue/keymap34.dtsi>
 
 / {
