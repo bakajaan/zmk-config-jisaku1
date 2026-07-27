@@ -53,6 +53,18 @@ manifest:
     - name: zmk-feature-ctlr-assert
       remote: bakajaan
       revision: 59d09925dc64bc3aaf30accfbbdf42ea922c0948
+    # スレッドスタック使用量モニター + ログキャプチャ (DYA Studio Troubleshootingタブ用 2026-07-27追加)
+    # cormoran__devtool サブシステム: スタックの高水位線・ログをリアルタイムで確認できる。
+    # スタックオーバーフロー起因のウォッチドッグクラッシュの原因調査に有用。
+    - name: zmk-module-devtool
+      remote: cormoran
+      revision: 9938a2c73c06d6e65ba2c0b68c9aa044a467eafc
+    # 高速キーマップ読込 (DYA Studio 2026-07-27追加)
+    # cormoran__fast_keymap サブシステム: フィンガープリントキャッシュにより
+    # 2回目以降のキーマップ読込をほぼ即座に完了させる。
+    - name: zmk-feature-fast-keymap
+      remote: cormoran
+      revision: 8dac76de0ba38588ba39ca498910e24f8332bc6b
     # ランタイムマクロ / ランタイムコンボ (DYA Studio Macro & Comboタブ用 2026-07-26追加)
     # 上流READMEでは「動作確認中」の位置付けのため、実機で要動作確認
     - name: zmk-feature-runtime-macro
