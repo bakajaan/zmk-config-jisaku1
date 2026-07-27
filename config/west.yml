@@ -47,6 +47,12 @@ manifest:
       remote: cormoran
       revision: 1432f7fe0cfe903cd7d3c9931ae6bd6f2e1f328e
       import: true
+    # BLEコントローラのアサート記録 (2026-07-27追加)
+    # LL_ASSERT失敗を素のk_oops（PC/LRだけでシンボル解決不能）ではなく、
+    # 発生元のソースファイル名と行番号としてウォッチドッグ記録に残す。
+    - name: zmk-feature-ctlr-assert
+      remote: bakajaan
+      revision: 59d09925dc64bc3aaf30accfbbdf42ea922c0948
     # ランタイムマクロ / ランタイムコンボ (DYA Studio Macro & Comboタブ用 2026-07-26追加)
     # 上流READMEでは「動作確認中」の位置付けのため、実機で要動作確認
     - name: zmk-feature-runtime-macro
